@@ -4,7 +4,7 @@ layout: post
 date: 2017-08-04
 ---
 
-I have written a [promise](https://github.com/kirkshoop/promise/blob/master/promise_1.h), a [promise/future pair](https://github.com/kirkshoop/promise/blob/master/promise_2.h) and a [packaged_task/future pair](https://github.com/kirkshoop/promise/blob/master/packaged_task.h) on top of the Single concepts!
+I have written a [promise](https://github.com/kirkshoop/promise/blob/master/promise_1.h), a [promise/future pair](https://github.com/kirkshoop/promise/blob/master/promise_2.h) and a [packaged_task/future pair](https://github.com/kirkshoop/promise/blob/master/packaged_task.h) on top of the _Single_ concepts!
 
 I have written derivatives of this pattern 5 times now. each time it is painful. This one was no less painful.
 
@@ -233,7 +233,7 @@ auto then(F&& f) const {
 
 This just builds the internals of a new promise and chains the transform onto the previous result and subscribes the results into the `async_subject`.
 
-## `async_subject` 
+## `async_subject`
 
 A _SingleSubject_ is a conduit. It connects a producer and many consumers. It has a _Single_ that the producer calls and it has a _SingleDeferred_ that the consumer calls. When the producer calls a method on the _Single_, this is forwarded to the _Single_ that each consumer passed to `subscribe()`.
 
