@@ -9,7 +9,7 @@ require 'jekyll'
 desc "Serve blog locally http://localhost:4000"
 task :serve do
     system "git checkout source"
-    system "bundle exec jekyll serve --watch --drafts"
+    system "bundle exec jekyll serve --trace --watch --drafts"
 end
 
 desc "Generate blog files"

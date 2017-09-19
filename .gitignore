@@ -1,4 +1,5 @@
 _site/**
 .sass-cache/**
 _plantuml/**
+uml/**
 Gemfile.lock
