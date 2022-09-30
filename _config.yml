@@ -1,12 +1,17 @@
 # Site settings
 title: Fictional Memory
-email: kirk.shoop@gmail.com
+author:
+  name: "Kirk Shoop"
+  email: kirk.shoop@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   an intersection of C++ and Win32
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kirkshoop.github.io" # the base hostname & protocol for your site
 twitter_username: kirkshoop
 github_username:  kirkshoop
+copyright: "(c) Kirk Shoop, 2010-2022"
+encoding: utf-8
+timezone: America/San_Francisco
 
 # Build settings
 markdown: kramdown
@@ -15,6 +20,8 @@ highlighter: rouge
 
 kramdown:
   input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 #markdown: redcarpet
 #redcarpet:
@@ -26,11 +33,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-plantuml
-
-#plantuml:
-#  plantuml_jar: _bin/plantuml.jar     # path to plantuml jar
-#  tmp_folder: _plantuml               # tmp folder to put generated image files
-  #dot_exe: c:/graphviz/bin/dot.exe    # [optional] path to Graphviz dot execution
-#  background_color: white             # [optional] UML image background color
+  - jekyll-avatar
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']

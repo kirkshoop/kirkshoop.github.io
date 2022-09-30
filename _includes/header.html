@@ -3,7 +3,7 @@
   <div class="wrapper">
 
     <div class="site-title">
-      <img src="{{ site.email | get_gravatar }}?s=48" />
+      {% avatar {{site.github_username}} size=48 %}
       <a href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
 
